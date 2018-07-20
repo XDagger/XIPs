@@ -23,10 +23,9 @@ For XDAG implementers, XIPs are a convenient way to track the progress of their 
 There are three types of XIP:
 
 - A **Standard Track XIP** describes any change that affects most or all XDAG implementations, such as a change to the the network protocol, a change in block or transaction validity rules, proposed application standards/conventions, or any change or addition that affects the interoperability of applications using XDAG. Furthermore Standard XIPs can be broken down into the following categories. Standards Track XIPs consist of three parts, a design document, implementation, and finally if warranted an update to the [formal specification].
-  - **Core** - improvements requiring a consensus fork, as well as changes that are not necessarily consensus critical but may be relevant to [“core dev” discussions](https://github.com/XDAG/management).
-  - **Networking** - includes improvements around [devp2p] ([XIP8]) and [Light XDAG Subprotocol], as well as proposed improvements to network protocol specifications of [whisper] and [swarm].
-  - **Interface** - includes improvements around client [API/RPC] specifications and standards, and also certain language-level standards like method names ([XIP59], [XIP6]) and [contract ABIs]. The label “interface” aligns with the [interfaces repo] and discussion should primarily occur in that repository before an XIP is submitted to the XIPs repository.
-  - **ERC** - application-level standards and conventions, including contract standards such as token standards ([ERC20]), name registries ([ERC26], [ERC137]), URI schemes ([ERC67]), library/package formats ([XIP82]), and wallet formats ([XIP75], [XIP85]).
+  - **Core** - improvements requiring a consensus fork, as well as changes that are not necessarily consensus critical but may be relevant to [“core dev” discussions](https://github.com/xdagger/management).
+  - **Networking** - includes proposed improvements to network protocol specifications.
+  - **Interface** - includes improvements around client [API/RPC] specifications and standards. The label “interface” aligns with the [interfaces repo] and discussion should primarily occur in that repository before an XIP is submitted to the XIPs repository.
 - An **Informational XIP** describes an XDAG design issue, or provides general guidelines or information to the XDAG community, but does not propose a new feature. Informational XIPs do not necessarily represent XDAG community consensus or a recommendation, so users and implementers are free to ignore Informational XIPs or follow their advice.
 - A **Meta XIP** describes a process surrounding XDAG or proposes a change to (or an event in) a process. Process XIPs are like Standards Track XIPs but apply to areas other than the XDAG protocol itself. They may propose an implementation, but not to XDAG's codebase; they often require community consensus; unlike Informational XIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in XDAG development. Any meta-XIP is also considered a Process XIP.
 
@@ -36,9 +35,9 @@ An XIP must meet certain minimum criteria. It must be a clear and complete descr
 
 ## XIP Work Flow
 
-Parties involved in the process are you, the champion or *XIP author*, the [*XIP editors*](#xip-editors), and the [*XDAG Core Developers*](https://github.com/XDAG/management).
+Parties involved in the process are you, the champion or *XIP author*, the [*XIP editors*](#xip-editors), and the [*XDAG Core Developers*](https://github.com/xdagger/management).
 
-:warning: Before you begin, vet your idea, this will save you time. Ask the XDAG community first if an idea is original to avoid wasting time on something that will be be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where XDAG is used. Examples of appropriate public forums to gauge interest around your XIP include [the XDAG subreddit], [the Issues section of this repository], and [one of the XDAG Gitter chat rooms]. In particular, [the Issues section of this repository] is an excellent place to discuss your proposal with the community and start creating more formalized language around your XIP.
+:warning: Before you begin, vet your idea, this will save you time. Ask the XDAG community first if an idea is original to avoid wasting time on something that will be be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where XDAG is used. Examples of appropriate public forums to gauge interest around your XIP include [the Issues section of this repository], and [one of the XDAG discord channel]. In particular, [the Issues section of this repository] is an excellent place to discuss your proposal with the community and start creating more formalized language around your XIP.
 
 Your role as the champion is to write the XIP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea. Following is the process that a successful XIP will move along:
 
@@ -50,11 +49,11 @@ Each status change is requested by the XIP author and reviewed by the XIP editor
 
 * **Work in progress (WIP)** -- Once the champion has asked the XDAG community whether an idea has any chance of support, they will write a draft XIP as a [pull request]. Consider including an implementation if this will aid people in studying the XIP.
   * :arrow_right: Draft -- If agreeable, XIP editor will assign the XIP a number (generally the issue or PR number related to the XIP) and merge your pull request. The XIP editor will not unreasonably deny an XIP.
-  * :x: Draft -- Reasons for denying draft status include being too unfocused, too broad, duplication of effort, being technically unsound, not providing proper motivation or addressing backwards compatibility, or not in keeping with the [XDAG philosophy](https://github.com/XDAG/wiki/wiki/White-Paper#philosophy).
+  * :x: Draft -- Reasons for denying draft status include being too unfocused, too broad, duplication of effort, being technically unsound, not providing proper motivation or addressing backwards compatibility.
 * **Draft** -- Once the first draft has been merged, you may submit follow-up pull requests with further changes to your draft until such point as you believe the XIP to be mature and ready to proceed to the next status. An XIP in draft status must be implemented to be considered for promotion to the next status (ignore this requirement for core XIPs).
   * :arrow_right: Last Call -- If agreeable, the XIP editor will assign Last Call status and set a review end date, normally 14 days later.
-  * :x: Last Call -- A request for Last Call status will be denied if material changes are still expected to be made to the draft. We hope that XIPs only enter Last Call once, so as to avoid unnecessary noise on the RSS feed. Last Call will be denied if the implementation is not complete and supported by the community.
-* **Last Call** -- This XIP will listed prominently on the http://xips.XDAG.org/ website (subscribe via RSS at [last-call.xml](/last-call.xml)).
+  * :x: Last Call -- A request for Last Call status will be denied if material changes are still expected to be made to the draft. We hope that XIPsnter Last C only eall once, so as to avoid unnecessary noise. Last Call will be denied if the implementation is not complete and supported by the community.
+* **Last Call** -- This XIP will listed prominently on the http://xdag.io/xips/ website.
   * :x: -- A Last Call which results in material changes or substantial unaddressed complaints will cause the XIP to revert to Draft.
   * :arrow_right: Accepted (Core XIPs only) -- After the review end date, the XDAG Core Developers will vote on whether to accept this change. If yes, the status will upgrade to Accepted.
   * :arrow_right: Final (Not core XIPs) -- A successful Last Call without material changes or unaddressed complaints will become Final.
@@ -73,16 +72,16 @@ Other exceptional statuses include:
 
 Each XIP should have the following parts:
 
-- Preamble - RFC 822 style headers containing metadata about the XIP, including the XIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below](https://github.com/XDAG/XIPs/blob/master/XIPS/xip-1.md#xip-header-preamble) for details.
+- Preamble - RFC 822 style headers containing metadata about the XIP, including the XIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details. See [below](https://github.com/xdagger/XIPs/blob/master/XIPS/xip-1.md#xip-header-preamble) for details.
 - Simple Summary - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the XIP.
 - Abstract - a short (~200 word) description of the technical issue being addressed.
 - Motivation (*optional) - The motivation is critical for XIPs that want to change the XDAG protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the XIP solves. XIP submissions without sufficient motivation may be rejected outright.
-- Specification - The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current XDAG platforms (cpp-XDAG, go-XDAG, parity, XDAGJ, XDAGjs-lib, [and others](https://github.com/XDAG/wiki/wiki/Clients).
+- Specification - The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current XDAG platforms (xdag, cpp-xdag, go-xdag, and others.
 - Rationale - The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
 - Backwards Compatibility - All XIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The XIP must explain how the author proposes to deal with these incompatibilities. XIP submissions without a sufficient backwards compatibility treatise may be rejected outright.
 - Test Cases - Test cases for an implementation are mandatory for XIPs that are affecting consensus changes. Other XIPs can choose to include links to test cases if applicable.
 - Implementations - The implementations must be completed before any XIP is given status “Final”, but it need not be completed before the XIP is merged as draft. While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of “rough consensus and running code” is still useful when it comes to resolving many discussions of API details.
-- Copyright Waiver - All XIPs must be in the public domain. See the bottom of this XIP for an example copyright waiver.
+- Copyright - All XIPs must be under MIT license. See the bottom of this XIP for an example copyright.
 
 ## XIP Formats and Templates
 
@@ -105,9 +104,9 @@ Each XIP must begin with an RFC 822 style header preamble, preceded and followed
 
 `* review-period-end: YYYY-MM-DD
 
-` type: `<Standards Track (Core, Networking, Interface, ERC)  | Informational | Meta>
+` type: `<Standards Track (Core, Networking, Interface)  | Informational | Meta>
 
-` * category:` <Core | Networking | Interface | ERC>
+` * category:` <Core | Networking | Interface>
 
 ` created:` <date created on, in ISO 8601 (yyyy-mm-dd) format>
 
@@ -137,7 +136,7 @@ if the email address is not given.
 
 Note: The resolution header is required for Standards Track XIPs only. It contains a URL that should point to an email message or other web resource where the pronouncement about the XIP is made.
 
-The type header specifies the type of XIP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking, interface, or ERC).
+The type header specifies the type of XIP: Standards Track, Meta, or Informational. If the track is Standards please include the subcategory (core, networking and interface).
 
 The category header specifies the XIP's category. This is required for standards-track XIPs only.
 
