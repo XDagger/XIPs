@@ -4,8 +4,8 @@ title: <XIP title>
 author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 discussions-to: <email address>
 status: Draft
-type: <Standards Track (Core, Networking, Interface, ERC)  | Informational | Meta>
-category (*only required for Standard Track): <Core | Networking | Interface | ERC>
+type: <Standards Track (Core, Networking, Interface)  | Informational | Meta>
+category (*only required for Standard Track): <Core | Networking | Interface>
 created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
 requires (*optional): <XIP number(s)>
 replaces (*optional): <XIP number(s)>
@@ -27,11 +27,11 @@ If you can't explain it simply, you don't understand it well enough." Provide a 
 A short (~200 word) description of the technical issue being addressed.
 
 ## Motivation
-<!--The motivation is critical for XIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the XIP solves. XIP submissions without sufficient motivation may be rejected outright.-->
-The motivation is critical for XIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the XIP solves. XIP submissions without sufficient motivation may be rejected outright.
+<!--The motivation is critical for XIPs that want to change the XDAG protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the XIP solves. XIP submissions without sufficient motivation may be rejected outright.-->
+The motivation is critical for XIPs that want to change the XDAG protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the XIP solves. XIP submissions without sufficient motivation may be rejected outright.
 
 ## Specification
-<!--The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current Ethereum platforms (go-ethereum, parity, cpp-ethereum, ethereumj, ethereumjs, and [others](https://github.com/ethereum/wiki/wiki/Clients)).-->
+<!--The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current XDAG platforms (xdag, go-xdag, cpp-xdag, and [others].-->
 The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current XDAG platforms.
 
 ## Rationale
