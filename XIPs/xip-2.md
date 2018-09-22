@@ -46,7 +46,7 @@ Elements of the query component may contain characters outside the valid range. 
  xdagparams  = xdagparam [ "&" xdagparams ]
  xdagparam   = [ amountparam / labelparam / messageparam / otherparam / reqparam ]
  amountparam    = "amount=" *digit [ "." *digit ]
- abelparam     = "label=" *qchar
+ labelparam     = "label=" *qchar
  messageparam   = "message=" *qchar
  otherparam     = qchar *qchar [ "=" *qchar ]
  reqparam       = "req-" qchar *qchar [ "=" *qchar ]
